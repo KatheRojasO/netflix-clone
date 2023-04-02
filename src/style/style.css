@@ -1,0 +1,7 @@
+@import "./base/layout.css";
+@import "./base/typography.css";
+@import "./base/variables.css";
+
+@import "./components/Header.css";
+@import "./components/SearchBar.css";
+@import "./components/MovieBanner.css"
