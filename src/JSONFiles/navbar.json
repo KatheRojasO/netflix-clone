@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "href": "/browse",
+    "text": "Home"
+  },
+  {
+    "id": 2,
+    "href": "/#",
+    "text": "TV Shows"
+  },
+  {
+    "id": 3,
+    "href": "/#",
+    "text": "Movies"
+  },
+  {
+    "id": 4,
+    "href": "/latest",
+    "text": "New & Popular"
+  }
+]
