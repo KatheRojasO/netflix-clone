@@ -2,9 +2,16 @@
 
 html {
   font-family: Helvetica,Roboto,Ubuntu,sans-serif;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+}
+
+li {
+  list-style-type: none;
 }

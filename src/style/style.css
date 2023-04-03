@@ -4,4 +4,6 @@
 
 @import "./components/Header.css";
 @import "./components/SearchBar.css";
-@import "./components/MovieBanner.css"
+@import "./components/MovieBanner.css";
+
+@import "./pages/Browse.css"
