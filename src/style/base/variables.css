@@ -1,0 +1,13 @@
+/* Colors */
+:root {
+    --netflix-red: rgb(229,9,20);
+    --netflix-dark-red: rgb(193,17,25);
+    --netflix-white: #fff;
+  }
+  
+  /* Space */
+  :root {
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-big: 32px;
+  }

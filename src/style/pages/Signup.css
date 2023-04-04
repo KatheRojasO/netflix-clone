@@ -1,0 +1,62 @@
+.signup-page {
+  background-image: url("../../assets/images/signup-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.signup-page .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+}
+
+.signup-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-big) var(--space-medium);
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.auth-container input {
+  padding: 1rem;
+  background-color: transparent;
+  width: 90%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  /* transition: color 250ms cubic-bezier(0.5, 0, 0.1, 1); */
+}
+
+.netflix-logo {
+  width: 5.5625rem;
+  height: 1.5rem;
+}
+
+.signup-page p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.start-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* .netflix-logo {
+  width: 9.25rem;
+  height: 3rem;
+} */
