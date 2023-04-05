@@ -1,25 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import logo from "../assets/images/netflix-logo.svg";
 
 export default function Signup() {
-  const [email, setEmail] = useState("");
+  const location = useLocation();
+
   return (
     <div className="signup-page">
+      <div className="signup-header">
+        <img src={logo} alt="netflix-logo" className="netflix-logo" />
+        <button>Sign in</button>
+      </div>
       <div className="container">
-        <div className="signup-header">
-          <img src={logo} alt="netflix-logo" className="netflix-logo" />
-          <button>Sign in</button>
-        </div>
         <div className="signup-content">
-          <h1>Unlimited films, TV programmes and more.</h1>
-          <p>Watch anywhere. Cancel at any time.</p>
-          <p>
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </p>
+          <h1>Create a password to start your membership</h1>
+          <p>Just a few more steps and you're finished!</p>
+          <p>We hate paperwork, too.</p>
           <form className="auth-container">
-            <input type="email" placeholder="Email address" required />
-            <button className="start-btn">Get Started</button>
+            <input
+              type="email"
+              placeholder="Email address"
+              value={location.state.email}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Add a password"
+              value={location.state.email}
+              required
+            />
+            <button className="start-btn">Next</button>
           </form>
         </div>
       </div>

@@ -7,5 +7,6 @@
 @import "./components/MovieBanner.css";
 @import "./components/TopTenSection.css";
 
+@import "./pages/LandingPage.css";
 @import "./pages/Signup.css";
 @import "./pages/Browse.css";
