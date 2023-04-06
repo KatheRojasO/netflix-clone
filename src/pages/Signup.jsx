@@ -26,7 +26,6 @@ export default function Signup() {
             <input
               type="password"
               placeholder="Add a password"
-              value={location.state.email}
               required
             />
             <button className="start-btn">Next</button>
