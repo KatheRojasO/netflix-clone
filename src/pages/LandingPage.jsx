@@ -23,7 +23,7 @@ export default function LandingPage() {
       <div className="container">
         <div className="landing-header">
           <img src={logo} alt="netflix-logo" className="netflix-logo" />
-          <button>Sign in</button>
+          <button onClick={()=> navigate("/login")}>Sign in</button>
         </div>
         <div className="landing-content">
           <h1>Unlimited films, TV programmes and more.</h1>
