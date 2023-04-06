@@ -1,9 +1,36 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { createAccount } from "../scripts/auth";
+import { useUser } from "../state/UserContextProvider";
+import { setUserSession } from "../scripts/userSessionHandler";
 import logo from "../assets/images/netflix-logo.svg";
+import { setUser } from "../scripts/usersCollection";
 
 export default function Signup() {
   const location = useLocation();
+  const [email, setEmail] = useState(location.state.email);
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const { dispatch } = useUser();
+
+  async function onSubmit(event) {
+    event.preventDefault();
+    const result = await createAccount(email, password);
+
+    if (result.status === true) {
+        const newUser = {
+            email: email,
+            isAdmin: false
+        }
+        const dbUserId = await setUser(newUser)
+        dispatch({ type: "initialise", payload: newUser });
+        setUserSession({id: dbUserId, ...newUser})
+        navigate("/browse")
+      
+    } else {
+      alert(`Cannot creat account, ${result.message}!`);
+    }
+  }
 
   return (
     <div className="signup-page">
@@ -16,19 +43,26 @@ export default function Signup() {
           <h1>Create a password to start your membership</h1>
           <p>Just a few more steps and you're finished!</p>
           <p>We hate paperwork, too.</p>
-          <form className="auth-container">
+          <form
+            className="auth-container"
+            onSubmit={(event) => onSubmit(event)}
+          >
             <input
               type="email"
               placeholder="Email address"
-              value={location.state.email}
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               required
             />
             <input
               type="password"
               placeholder="Add a password"
+              onChange={(event) => setPassword(event.target.value)}
               required
             />
-            <button className="start-btn">Next</button>
+            <button className="start-btn" type="submit">
+              Next
+            </button>
           </form>
         </div>
       </div>

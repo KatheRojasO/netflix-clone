@@ -7,5 +7,5 @@ import React from "react";
 export default function Protected() {
   const { user } = useUser();
 
-  return user ? <Outlet /> : <Navigate to="/" />;
+  return user ? <Outlet /> : <Navigate to="/login" />;
 }

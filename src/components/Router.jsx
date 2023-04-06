@@ -18,7 +18,7 @@ export default function Router() {
         </Route>
 
         <Route element={<Protected />}>
-          <Route path="/instructor-page" element={<Browse />} />
+          <Route path="/browse" element={<Browse />} />
         </Route>
       </Routes>
     </div>

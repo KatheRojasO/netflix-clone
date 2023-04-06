@@ -1,4 +1,4 @@
-import { collection, query, where } from "firebase/firestore";
+import { addDoc, collection, query, where } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 import { database } from "./firebase/firebaseSetup";
 
@@ -17,4 +17,10 @@ export async function getUser(email) {
     userDocument = { id: queryDoc.id, ...queryDoc.data() };
   }
   return userDocument;
+}
+
+export async function setUser(user){
+  const document = await addDoc(usersCollection, user);
+  const result = document.id;
+  return result;
 }

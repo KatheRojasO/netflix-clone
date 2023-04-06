@@ -1,8 +1,7 @@
 export function setUserSession(user) {
   localStorage.setItem("email", user.email);
   localStorage.setItem("id", user.id);
-  localStorage.setItem("isInstructor", user.isInstructor);
-  localStorage.setItem("name", user.name);
+  localStorage.setItem("isAdmin", user.isAdmin);
 }
 
 export function getUserSession() {
@@ -10,8 +9,7 @@ export function getUserSession() {
     ? {
         email: localStorage.getItem("email"),
         id: localStorage.getItem("id"),
-        isInstructor: localStorage.getItem("isInstructor"),
-        name: localStorage.getItem("name"),
+        isInstructor: localStorage.getItem("isAdmin"),
       }
     : null;
 }

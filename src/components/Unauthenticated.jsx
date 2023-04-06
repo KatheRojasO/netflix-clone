@@ -6,10 +6,10 @@ export default function Unauthenticated() {
   const { user } = useUser();
 
   return user ? (
-    user.isInstructor ? (
-      <Navigate to="/instructor-page" />
+    user.isAdmin ? (
+      <Navigate to="/admin" />
     ) : (
-      <Navigate to="/student-page" />
+      <Navigate to="/browse" />
     )
   ) : (
     <Outlet />
