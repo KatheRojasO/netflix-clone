@@ -22,8 +22,8 @@ export default function LoginHelp() {
   return (
     <div className="login-help">
       <div className="login-header">
-        <img src={logo} alt="netflix-logo" className="netflix-logo" />
-        <button>Sign in</button>
+        <img src={logo} alt="netflix-logo" className="netflix-logo" onClick={()=> navigate("/")} />
+        <button onClick={()=> navigate("/login")}>Sign in</button>
       </div>
       <div className="container">
         <h1 className="form-title">Forgot Password</h1>

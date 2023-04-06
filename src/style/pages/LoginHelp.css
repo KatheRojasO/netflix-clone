@@ -46,6 +46,10 @@
   color: #0080ff;
 }
 
+.login-help .netflix-logo {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .login-help .login-header {
     background-color: black;

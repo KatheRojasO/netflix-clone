@@ -35,8 +35,8 @@ export default function Signup() {
   return (
     <div className="signup-page">
       <div className="signup-header">
-        <img src={logo} alt="netflix-logo" className="netflix-logo" />
-        <button>Sign in</button>
+        <img src={logo} alt="netflix-logo" className="netflix-logo" onClick={()=> navigate("/")} />
+        <button onClick={()=> navigate("/login")}>Sign in</button>
       </div>
       <div className="container">
         <div className="signup-content">

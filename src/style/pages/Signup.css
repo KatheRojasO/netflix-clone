@@ -46,6 +46,10 @@
   color: var(--netflix-black);
 }
 
+.signup-page .netflix-logo {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .signup-page .auth-container input {
     width: 92%;

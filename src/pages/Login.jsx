@@ -34,7 +34,7 @@ export default function Login() {
   return (
     <div className="login-page">
       <div className="login-header">
-        <img src={logo} alt="netflix-logo" className="netflix-logo" />
+        <img src={logo} alt="netflix-logo" className="netflix-logo" onClick={()=> navigate("/")} />
       </div>
       <div className="container">
         <div className="login-content">
