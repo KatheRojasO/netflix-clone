@@ -1,0 +1,72 @@
+.login-help .login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--netflix-white);
+  border-bottom: 1px solid lightgray;
+}
+
+.login-help .container {
+  background-color: #f3f3f3;
+  height: 100vh;
+  color: var(--netflix-black);
+}
+
+.login-header button {
+  background-color: transparent;
+  color: var(--netflix-red);
+  font-weight: bold;
+  padding: 0;
+}
+
+
+
+.login-help-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-help input {
+  border: 1px solid lightgray;
+  border-radius: 1px;
+  padding: var(--space-medium);
+  margin-bottom: 10px;
+}
+
+.login-help .submit-btn {
+  background-color: #0080ff;
+  border-radius: 1px;
+  padding: var(--space-medium);
+  margin-top: 10px;
+}
+
+.submitted-message {
+  text-align: justify;
+  font-size: 14px;
+  color: #0080ff;
+}
+
+@media (min-width: 768px) {
+  .login-help .login-header {
+    background-color: black;
+    border-bottom: none;
+  }
+
+  .login-header .netflix-logo {
+    width: 9.25rem;
+    height: 3rem;
+  }
+
+  .login-header button {
+    font-size: 18px;
+  }
+
+  .login-help .container {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}

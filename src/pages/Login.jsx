@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { login } from "../scripts/auth";
 import { useUser } from "../state/UserContextProvider";
 import { getUser } from "../scripts/usersCollection";
