@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-import { useUser } from "../state/UserContextProvider";
+import { useUser } from "../state/User/UserContextProvider";
 
 import React from "react";
 

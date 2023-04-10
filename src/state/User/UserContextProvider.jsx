@@ -1,6 +1,6 @@
 // Node modules
 import { createContext, useContext, useReducer } from "react";
-import { getUserSession } from "../scripts/userSessionHandler";
+import { getUserSession } from "../../scripts/userSessionHandler";
 
 //Project Files
 import UserReducer from "./UserReducer";

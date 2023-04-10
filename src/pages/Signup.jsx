@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { createAccount } from "../scripts/auth";
-import { useUser } from "../state/UserContextProvider";
+import { useUser } from "../state/User/UserContextProvider";
 import { setUserSession } from "../scripts/userSessionHandler";
 import { setUser } from "../scripts/usersCollection";
 import logo from "../assets/images/netflix-logo.svg";
