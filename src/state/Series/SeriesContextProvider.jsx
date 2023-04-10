@@ -8,12 +8,12 @@ const SeriesContext = createContext(null);
 
 export function SeriesContextProvider({ children }) {
   //State
-  const [series, dispatch] = useReducer(SeriesReducer, []);
+  const [series, seriesDispatch] = useReducer(SeriesReducer, []);
 
   //Properties
-  const values = { series, dispatch };
+  const values = { series, seriesDispatch };
 
-  return <SeriesContextProvider.Provider value={values}>{children}</SeriesContextProvider.Provider>;
+  return <SeriesContext.Provider value={values}>{children}</SeriesContext.Provider>;
 }
 
 export function useSeries() {

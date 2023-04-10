@@ -9,12 +9,12 @@ const DocumentariesContext = createContext(null);
 
 export function DocumentariesContextProvider({ children }) {
   //State
-  const [documentaries, dispatch] = useReducer(DocumentariesReducer, []);
+  const [documentaries, documentariesDispatch] = useReducer(DocumentariesReducer, []);
 
   //Properties
-  const values = { documentaries, dispatch };
+  const values = { documentaries, documentariesDispatch };
 
-  return <DocumentariesContextProvider.Provider value={values}>{children}</DocumentariesContextProvider.Provider>;
+  return <DocumentariesContext.Provider value={values}>{children}</DocumentariesContext.Provider>;
 }
 
 export function useDocumentaries() {

@@ -9,12 +9,12 @@ const MoviesContext = createContext(null);
 
 export function MoviesContextProvider({ children }) {
   //State
-  const [movies, dispatch] = useReducer(MoviesReducer, []);
+  const [movies, moviesDispatch] = useReducer(MoviesReducer, []);
 
   //Properties
-  const values = { movies, dispatch };
+  const values = { movies, moviesDispatch };
 
-  return <MoviesContextProvider.Provider value={values}>{children}</MoviesContextProvider.Provider>;
+  return <MoviesContext.Provider value={values}>{children}</MoviesContext.Provider>;
 }
 
 export function useMovies() {
