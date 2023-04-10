@@ -1,18 +1,25 @@
 .netflix-header {
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.netflix-header.scrolled {
+  background-color: #000;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: var(--space-small) var(--space-medium);
 }
 
 .nav-left,
@@ -22,27 +29,10 @@
   align-items: center;
 }
 
-.logo {
-  width: 100px;
-  object-fit: contain;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-left: 1.5rem;
-  font-family: Helvetica,Roboto,Ubuntu,sans-serif;
-}
-
 nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -52,4 +42,75 @@ nav a:hover {
 
 nav a:focus {
   font-weight: bold;
+}
+
+.dropbtn {
+  display: none;
+}
+
+.dropdown-content {
+  display: flex;
+}
+
+.link-container {
+  margin-left: 20px;
+}
+
+.user-logo {
+  width: 35px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: var(--space-small);
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000d5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  .link-container:hover {
+    background-color: #3434348f;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: transparent;
+  }
 }
