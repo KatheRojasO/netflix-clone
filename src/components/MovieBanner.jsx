@@ -1,13 +1,15 @@
 import React from "react";
+import bannerLogo from "../assets/images/banner-logo.png";
 
 export default function MovieBanner() {
   return (
     <div>
       <header className="banner">
         <div className="banner-content">
-          <h1 className="banner-title">Stranger Things</h1>
+          
+          <img src={bannerLogo} alt="logo" className="banner-logo" />
           <p className="banner-description">
-            Stranger sightings. Government secrets. Feraless kids. And a dark
+            Stranger sightings. Government secrets. Fearless kids. And a dark
             force that turns a small town upside down.
           </p>
           <div className="banner-buttons">
