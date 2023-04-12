@@ -15,10 +15,9 @@ export default function Modal({ videoData, open, onClose }) {
         <CancelRoundedIcon className="close-button" onClick={onClose}/>
         <div>
           <ReactPlayer
-            url={videoData.link}
+            url={link}
             width="100%"
             height="300px"
-            playing={true}
           />
         </div>
         <div className="modal-info">

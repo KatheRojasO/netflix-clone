@@ -4,7 +4,6 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RecommendIcon from "@mui/icons-material/Recommend";
 import ExpandCircleDownOutlinedIcon from "@mui/icons-material/ExpandCircleDownOutlined";
-import { Container } from "@mui/system";
 import Modal from "./Modal";
 
 export default function Card({ videoData }) {
