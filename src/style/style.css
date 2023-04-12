@@ -6,6 +6,8 @@
 @import "./components/SearchBar.css";
 @import "./components/MovieBanner.css";
 @import "./components/TopTenSection.css";
+@import "./components/Categories.css";
+@import "./components/Card.css";
 
 @import "./pages/LandingPage.css";
 @import "./pages/Signup.css";

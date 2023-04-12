@@ -1,0 +1,135 @@
+.carousel {
+  position: relative;
+  overflow: scroll;
+  margin: 0 auto;
+  margin-left: 30px;
+}
+
+.card{
+  width: 300px;
+  height: 200px;
+ 
+  margin: 0 2px 0 2px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.item-card:hover {
+  width: 40vw;
+  height: 22vw;
+  transition: 0.5s;
+  opacity: 1;
+  transition-delay: 0.3s;
+  
+}
+
+
+.body-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.body-item:hover {
+  width: 40vw;
+  height: 22vw;
+  opacity: 1;
+  transition: 0.4s;
+  transition-delay: 0.4s;
+  visibility: visible;
+}
+
+
+
+/* .carousel {
+  position: relative;
+  overflow: scroll;
+  margin: 0 auto;
+  margin-left: 30px;
+}
+
+.carousel__inner {
+  display: flex;
+}
+
+.categories-section {
+  overflow: scroll;
+}
+
+.categories-section .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  width: 25vw;
+  height: 15vw;
+  background-size: 100% 100%;
+  margin: 0 2px 0 2px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.item:hover {
+  width: 40vw;
+  height: 22vw;
+  transition: 0.5s;
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.card:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background-size: 100% 100%;
+} 
+
+.body-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.body-item:hover {
+  width: 40vw;
+  height: 22vw;
+  opacity: 1;
+  transition: 0.4s;
+  transition-delay: 0.4s;
+  visibility: visible;
+}
+
+.body-item-2 {
+  align-self: flex-start;
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+}
+
+.body-item-3 {
+  align-self: flex-start;
+}
+
+.card {
+  background-size: 100% 100%; 
+}
+
+
+.hola {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+}
+
+  */
