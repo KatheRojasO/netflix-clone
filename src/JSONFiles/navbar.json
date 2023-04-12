@@ -6,17 +6,17 @@
   },
   {
     "id": 2,
-    "href": "/#",
+    "href": "/series",
     "text": "TV Shows"
   },
   {
     "id": 3,
-    "href": "/#",
+    "href": "/movies",
     "text": "Movies"
   },
   {
     "id": 4,
-    "href": "/latest",
+    "href": "/movies",
     "text": "New & Popular"
   }
 ]

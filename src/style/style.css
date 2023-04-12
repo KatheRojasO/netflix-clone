@@ -9,6 +9,7 @@
 @import "./components/Categories.css";
 @import "./components/Card.css";
 @import "./components/Modal.css";
+@import "./components/Movies.css";
 
 @import "./pages/LandingPage.css";
 @import "./pages/Signup.css";
