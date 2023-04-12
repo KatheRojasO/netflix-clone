@@ -2,36 +2,33 @@
   position: relative;
   overflow: scroll;
   margin: 0 auto;
-  margin-left: 30px;
 }
 
 .carousel__inner {
+  height: 100px;
+  width: 260px;
   display: flex;
+  justify-content: row;
+  gap: 2rem;
 }
 
 .carousel__item {
   flex: 0 0 25%;
-  margin-right: 10px;
   display: flex;
-  height: 100px;
-}
-
-.carousel__item img {
-  object-fit: cover;
 }
 
 .movie-img {
-  margin-left: -8%;
+  margin-left: -10px;
 }
 
 @media (min-width: 768px) {
-  .carousel__item {
-    height: 150px;
+  .carousel__inner {
+    height: 135px;
+    width: 350px;
+    gap: 5rem;
   }
-}
 
-@media (min-width: 1024px) {
-  .carousel__item {
-    height: 200px;
+  .movie-img {
+    margin-left: -20px;
   }
 }

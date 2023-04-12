@@ -8,7 +8,7 @@ export default function Slider({ name, videos }) {
 
   return (
     <div className="slider">
-      <h1>{name}</h1>
+      <h3>{name}</h3>
       <CardSlider data={getContentFromRange(0, 10)} />
     </div>
   );

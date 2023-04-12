@@ -4,8 +4,8 @@ import data from "../JSONFiles/topTenNumbers.json";
 export default function TopTenSection() {
   const topList = data.map((item, index) => (
     <div key={index} className="carousel__item">
-      <img src={item.image} alt={item.title} />
-      <img src={item.movieImage} alt={item.title} className="movie-img" />
+      <img className="number-img" src={item.image} alt={item.title} />
+      <img className="movie-img" src={item.movieImage} alt={item.title} />
     </div>
   ));
 
