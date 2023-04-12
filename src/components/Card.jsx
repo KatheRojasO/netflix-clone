@@ -5,9 +5,11 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RecommendIcon from "@mui/icons-material/Recommend";
 import ExpandCircleDownOutlinedIcon from "@mui/icons-material/ExpandCircleDownOutlined";
 import { Container } from "@mui/system";
+import Modal from "./Modal";
 
 export default function Card({ videoData }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
@@ -34,7 +36,8 @@ export default function Card({ videoData }) {
                 <RecommendIcon />
               </div>
               <div className="icons-right">
-                <ExpandCircleDownOutlinedIcon />
+                <ExpandCircleDownOutlinedIcon onClick={()=> setIsOpen(true)} />
+                <Modal videoData={videoData} open={isOpen} onClose={() => setIsOpen(false)}/>
               </div>
             </div>
           </div>
