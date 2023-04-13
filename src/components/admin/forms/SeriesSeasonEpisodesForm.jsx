@@ -2,7 +2,6 @@ import {React} from 'react';
 
 export default function SeriesSeasonEpisodesForm({episodes, setEpisodes}) {
 
-
     function handleEpisodeFormChange(event, index) {
         let episodesData = [...episodes]
         episodesData[index][event.target.name] = event.target.value

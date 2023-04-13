@@ -2,13 +2,7 @@ import { React, useState, useEffect } from 'react';
 import SeriesSeasonEpisodesForm from './SeriesSeasonEpisodesForm';
 
 export default function SeriesSeasonForm({ index, season, seasons, setSeasons }) {
-    const [episodes, setEpisodes] = useState([{
-        description: '',
-        duration: '',
-        link: '',
-        thumbnail: '',
-        title: ''
-    }]);
+    const [episodes, setEpisodes] = useState(season.episodes);
 
     function handleSeasonFormChange(name, value) {
         let seasonsData = [...seasons]
@@ -20,6 +14,15 @@ export default function SeriesSeasonForm({ index, season, seasons, setSeasons })
     useEffect(() => {
         handleSeasonFormChange("episodes", episodes)
     }, [episodes])
+
+    function addSeason() {
+        const newSeason = {
+            season: '',
+            episodes: [{}]
+        }
+
+        setSeasons([...seasons, newSeason])
+    }
 
     return (
         <div>
@@ -33,6 +36,7 @@ export default function SeriesSeasonForm({ index, season, seasons, setSeasons })
                 />
             </label>
             <SeriesSeasonEpisodesForm episodes={episodes} setEpisodes={setEpisodes} />
+            <button onClick={() => addSeason()}>Add Season</button>
         </div>
     );
 }
