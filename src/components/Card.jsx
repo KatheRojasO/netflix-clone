@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
@@ -9,6 +10,7 @@ import Modal from "./Modal";
 export default function Card({ videoData }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -30,7 +32,7 @@ export default function Card({ videoData }) {
           <div className="info-container">
             <div className="icons-container">
               <div className="icons-left">
-                <PlayCircleIcon />
+                <PlayCircleIcon onClick={() => navigate(`/watch/${videoData.id}`)}/>
                 <AddCircleOutlineIcon />
                 <RecommendIcon />
               </div>
