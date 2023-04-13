@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { removeUserSession } from "../scripts/userSessionHandler";
+import { useUser } from "../state/User/UserContextProvider";
 import logo from "../assets/images/netflix-logo.png";
 import userLogo from "../assets/images/user-logo.jpg";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -7,7 +9,9 @@ import data from "../JSONFiles/navbar.json";
 import SearchBar from "./SearchBar";
 
 export default function Header() {
+  const { dispatch } = useUser();
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +32,14 @@ export default function Header() {
     </div>
   ));
 
+  function logout() {
+    removeUserSession();
+    dispatch({ type: "remove" });
+    navigate("/");
+  }
+
   return (
-    <header className={`netflix-header ${scrolled ? 'scrolled' : ''}` }>
+    <header className={`netflix-header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <div className="nav-left">
           <Link to="/browse">
@@ -45,7 +55,18 @@ export default function Header() {
 
         <div className="nav-right">
           <SearchBar />
-          <img src={userLogo} alt="user-logo" className="user-logo"></img>
+          <div className="dropdown-su">
+            <img
+              src={userLogo}
+              alt="user-logo"
+              className="user-logo-drop"
+            ></img>
+            <div className="dropdown-content-su">
+              <button class="dropbtn-su" onClick={() => logout()}>
+                Sign out of Netflix
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
