@@ -39,7 +39,6 @@ export default function NewEntryForm({categoryName, categoryDispatch, addFunctio
   async function addEntry(entry) {
 
     delete entry["id"]
-    console.log(entry)
     const newEntryId = await addFunction(entry)
     categoryDispatch({ type: "create", payload: { id: newEntryId, ...entry } });
 

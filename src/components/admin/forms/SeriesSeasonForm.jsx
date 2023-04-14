@@ -1,3 +1,4 @@
+import { Divider } from "@mui/material";
 import { React, useState, useEffect } from "react";
 import SeriesSeasonEpisodesForm from "./SeriesSeasonEpisodesForm";
 
@@ -19,16 +20,8 @@ export default function SeriesSeasonForm({
     handleSeasonFormChange("episodes", episodes);
   }, [episodes]);
 
-  function addSeason() {
-    const newSeason = {
-      season: "",
-      episodes: [{}],
-    };
-    setSeasons([...seasons, newSeason]);
-  }
-
   return (
-    <div>
+    <div className='serie-inputs'>
       <label className="add-form-label">
         Season Name:
         <input
@@ -41,9 +34,6 @@ export default function SeriesSeasonForm({
         />
       </label>
       <SeriesSeasonEpisodesForm episodes={episodes} setEpisodes={setEpisodes} />
-      <button className="add-season-btn" onClick={() => addSeason()}>
-        Add Season
-      </button>
     </div>
   );
 }

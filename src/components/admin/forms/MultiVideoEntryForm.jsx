@@ -40,6 +40,16 @@ export default function MultiVideoEntryForm({
     );
   });
 
+  function addSeason(event) {
+    event.preventDefault();
+
+    const newSeason = {
+      season: "",
+      episodes: [{}],
+    };
+    setSeasons([...seasons, newSeason]);
+  }
+
   return (
     <div className="forms">
       <form className="add-form">
@@ -95,10 +105,12 @@ export default function MultiVideoEntryForm({
               onChange={(event) => setImage(event.target.value)}
             />
           </label>
-          <label className="add-form-label">
-            Seasons
-            {season}
-          </label>
+          <h4>Seasons</h4>
+          {season}
+
+          <button className="add-season-btn" onClick={(event) => addSeason(event)}>
+            Add Season
+          </button>
         </div>
       </form>
       <div className="form-button">

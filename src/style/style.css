@@ -13,6 +13,7 @@
 @import "./components/AdminEntryView.css";
 @import "./components/AdminCategoryView.css";
 @import "./components/AdminModal.css";
+@import "./components/SeriesSeasonEpisodesForm.css";
 
 @import "./pages/LandingPage.css";
 @import "./pages/Signup.css";
