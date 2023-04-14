@@ -6,7 +6,7 @@ import logo from "../assets/images/netflix-logo.png";
 import userLogo from "../assets/images/user-logo.jpg";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import data from "../JSONFiles/navbar.json";
-import SearchBar from "./SearchBar";
+import SearchBar from "./browse/SearchBar";
 
 export default function Header() {
   const { user, dispatch } = useUser();

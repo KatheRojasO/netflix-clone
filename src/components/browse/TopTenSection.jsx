@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../JSONFiles/topTenNumbers.json";
+import data from "../../JSONFiles/topTenNumbers.json";
 
 export default function TopTenSection() {
   const topList = data.map((item, index) => (

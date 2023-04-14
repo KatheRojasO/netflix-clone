@@ -2,8 +2,8 @@ import React from "react";
 import { useDocumentaries } from "../state/Documentaries/DocumentariesContextProvider";
 import { useMovies } from "../state/Movies/MoviesContextProvider";
 import Header from "../components/Header";
-import MovieBanner from "../components/MovieBanner";
-import Card from "../components/Card";
+import MovieBanner from "../components/browse/MovieBanner";
+import Card from "../components/browse/Card";
 
 export default function Movies() {
   const { movies } = useMovies();

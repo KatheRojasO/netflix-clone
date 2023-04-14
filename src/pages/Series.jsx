@@ -1,8 +1,8 @@
 import React from "react";
 import { useSeries } from "../state/Series/SeriesContextProvider";
 import Header from "../components/Header";
-import MovieBanner from "../components/MovieBanner";
-import Card from "../components/Card";
+import MovieBanner from "../components/browse/MovieBanner";
+import Card from "../components/browse/Card";
 
 export default function Series() {
   const { series } = useSeries();

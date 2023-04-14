@@ -1,5 +1,5 @@
 import React from "react";
-import bannerLogo from "../assets/images/banner-logo.png";
+import bannerLogo from "../../assets/images/banner-logo.png";
 
 export default function MovieBanner() {
   return (

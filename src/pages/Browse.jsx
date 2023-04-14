@@ -1,8 +1,8 @@
 import React from "react";
-import Slider from "../components/Slider";
+import Slider from "../components/browse/Slider";
 import Header from "../components/Header";
-import MovieBanner from "../components/MovieBanner";
-import TopTenSection from "../components/TopTenSection";
+import MovieBanner from "../components/browse/MovieBanner";
+import TopTenSection from "../components/browse/TopTenSection";
 import { useDocumentaries } from "../state/Documentaries/DocumentariesContextProvider";
 import { useMovies } from "../state/Movies/MoviesContextProvider";
 import { useSeries } from "../state/Series/SeriesContextProvider";
