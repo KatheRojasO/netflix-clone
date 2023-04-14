@@ -29,6 +29,7 @@ export default function Router() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/series" element={<Series />} />
           <Route path="/watch/:id" element={<Player />} />
+          <Route path="/watch/:id/:season/:episode" element={<Player />} />
           <Route element={<Restricted/>}>
             <Route path="/admin" element={<Admin/>}></Route>
           </Route>

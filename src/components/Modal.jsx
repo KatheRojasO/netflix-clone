@@ -2,33 +2,36 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ReactPlayer from "react-player/youtube";
 import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Modal({ videoData, open, onClose }) {
-  const { link, description, genres, duration, year, cast, seasons } =
+  const { id, link, description, genres, duration, year, cast, seasons } =
     videoData;
+
+  const navigate = useNavigate();
 
   if (!open) return null;
 
   const episodes = seasons
-    ? seasons.map((item) => {
+    ? seasons.map((item, seasonIndex) => {
         return (
-          <div key={item.id}>
+          <div key={seasonIndex}>
             <div className="season-card-header">
               <h3>Episodes</h3>
               <h3>{item.season}</h3>
             </div>
-            {item.episodes.map((episode) => {
+            {item.episodes.map((episode, episodeIndex) => {
               return (
-                <div className="episodes-container">
+                <div key={episodeIndex}
+                  className="episodes-container"
+                  onClick={() => navigate(`/watch/${id}/${seasonIndex}/${episodeIndex}`)}
+                >
                   <div className="episode-card-header">
                     <h4>{episode.title}</h4>
                     <p>{episode.duration}</p>
                   </div>
                   <div className="episode-description">
-                    <Link to={episode.link}>
-                      <p>{episode.description}</p>
-                    </Link>
+                    <p>{episode.description}</p>
                   </div>
                 </div>
               );

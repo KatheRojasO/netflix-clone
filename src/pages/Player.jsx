@@ -12,10 +12,12 @@ export default function Player() {
   const params = useParams();
 
   const movieVideo = movies.find((video) => video.id === params.id);
-  const serieVideo = series.find((video) => video.id === params.id);
   const documentaryVideo = documentaries.find(
     (video) => video.id === params.id
   );
+
+  const seriesElement = series.find((serie) => serie.id === params.id);
+  const serieVideo = seriesElement && seriesElement.seasons.at(params.season).episodes.at(params.episode);
 
   return (
     <div className="playerDiv">
