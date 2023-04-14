@@ -12,8 +12,6 @@ export default function Card({ videoData }) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  console.log(videoData)
-
   return (
     <div
       className="content-card"

@@ -51,14 +51,4 @@ export async function recoverAccount(email) {
   }
   return result;
 }
-
-// export async function getUser(email) {
-//   auth.getUserByEmail(email).then((userRecord) => {
-    
-//     console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
-//   })
-//   .catch((error) => {
-//     console.log('Error fetching user data:', error);
-//   });
-// }
   
