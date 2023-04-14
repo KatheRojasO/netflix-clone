@@ -12,6 +12,7 @@
 @import "./components/Movies.css";
 @import "./components/AdminEntryView.css";
 @import "./components/AdminCategoryView.css";
+@import "./components/AdminModal.css";
 
 @import "./pages/LandingPage.css";
 @import "./pages/Signup.css";
