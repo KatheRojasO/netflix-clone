@@ -1,0 +1,21 @@
+.sections-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(70, 70, 80, 0.742);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.file-name {
+  margin: 0;
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  .file-name {
+    width: 250px;
+  }
+}

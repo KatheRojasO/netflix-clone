@@ -1,0 +1,17 @@
+.admin-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.entry-btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .entry-btn {
+    width: 60%;
+  }
+}
