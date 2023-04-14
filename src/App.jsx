@@ -10,7 +10,7 @@ import { useDocumentaries } from "./state/Documentaries/DocumentariesContextProv
 
 function App() {
   const { documentariesDispatch } = useDocumentaries();
-  const { movies, moviesDispatch } = useMovies();
+  const { moviesDispatch } = useMovies();
   const { seriesDispatch } = useSeries();
   const [status, setStatus] = useState(0);
 
@@ -44,8 +44,6 @@ function App() {
   function onFail() {
     setStatus(2);
   }
-
-  console.log(movies)
 
   return (
     <div className="App">

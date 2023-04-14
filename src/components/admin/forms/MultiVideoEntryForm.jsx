@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import SeriesSeasonForm from './SeriesSeasonForm';
+import React, { useState } from "react";
+import SeriesSeasonForm from "./SeriesSeasonForm";
 
-export default function MultiVideoEntryForm({ currentEntry, handleEntryEvent }) {
+export default function MultiVideoEntryForm({
+  currentEntry,
+  handleEntryEvent,
+}) {
   const [cast, setCast] = useState(currentEntry.cast);
   const [description, setDescription] = useState(currentEntry.description);
   const [genres, setGenres] = useState(currentEntry.genres);
-  const [image, setImage] = useState(currentEntry.image)
+  const [image, setImage] = useState(currentEntry.image);
   const [name, setName] = useState(currentEntry.name);
   const [seasons, setSeasons] = useState(currentEntry.seasons);
   const [year, setYear] = useState(currentEntry.year);
 
   function handleFormSubmit() {
-
     const newEntry = {
       id: currentEntry.id,
       cast: cast,
@@ -20,15 +22,27 @@ export default function MultiVideoEntryForm({ currentEntry, handleEntryEvent }) 
       image: image,
       name: name,
       seasons: seasons,
-      year: year
-    }
-
-    handleEntryEvent(newEntry)
+      year: year,
+    };
+    handleEntryEvent(newEntry);
   }
 
+  const season = seasons.map((season, index) => {
+    return (
+      <div key={index}>
+        <SeriesSeasonForm
+          index={index}
+          season={season}
+          seasons={seasons}
+          setSeasons={setSeasons}
+        />
+      </div>
+    );
+  });
+
   return (
-    <div>
-      <form className="add-form" >
+    <div className="forms">
+      <form className="add-form">
         <div className="form-title">
           <h3>Add a new entry to Netflix:</h3>
         </div>
@@ -83,19 +97,14 @@ export default function MultiVideoEntryForm({ currentEntry, handleEntryEvent }) 
           </label>
           <label className="add-form-label">
             Seasons
-            {seasons.map((season, index) => {
-              return (
-                <div key={index}>
-                  <SeriesSeasonForm index={index} season={season} seasons={seasons} setSeasons={setSeasons} />
-                </div>
-              )
-            })}
+            {season}
           </label>
         </div>
-      </form >
-
+      </form>
       <div className="form-button">
-        <button className="add-button" onClick={handleFormSubmit}>Save Entry</button>
+        <button className="add-button" onClick={handleFormSubmit}>
+          Save Entry
+        </button>
       </div>
     </div>
   );
