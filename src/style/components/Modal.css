@@ -6,8 +6,8 @@
   background-color: #181818;
   z-index: 1000;
   width: 415px;
-  height: auto;
-  
+  height: 500px;
+  overflow: scroll;
 }
 
 .overlay-style {
@@ -18,14 +18,13 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 1000;
-  overflow: auto;
 }
 
 .modal-info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--space-medium) var(--space-small);
+  padding: var(--space-medium) var(--space-small) 0;
 }
 
 .header span {
@@ -56,8 +55,44 @@
   cursor: pointer;
 }
 
+.season-card-header,
+.episode-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-info-down {
+  padding: 0 var(--space-small) var(--space-medium) ;
+}
+
+
+.episode-card-header h4,
+.episode-description p {
+  margin: 0;
+}
+
+.episode-description p {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.episode-description a {
+  text-decoration: none;
+  color: var(--netflix-white);
+}
+
+.episodes-container {
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.episodes-container:hover {
+  background-color: rgba(108, 112, 117, 0.345);
+}
+
 @media (min-width: 768px) {
-  .modal-info {
+  .modal-info, .modal-info-down {
     padding: var(--space-medium);
   }
 
@@ -66,7 +101,7 @@
   }
 
   .modal-info-left {
-    width:600px;
+    width: 600px;
     margin-right: 20px;
   }
 
