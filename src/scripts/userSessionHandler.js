@@ -9,7 +9,7 @@ export function getUserSession() {
     ? {
         email: localStorage.getItem("email"),
         id: localStorage.getItem("id"),
-        isAdmin: localStorage.getItem("isAdmin"),
+        isAdmin: localStorage.getItem("isAdmin") === 'true',
       }
     : null;
 }

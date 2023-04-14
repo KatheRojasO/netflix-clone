@@ -7,5 +7,5 @@ import React from "react";
 export default function Restricted() {
   const { user } = useUser();
 
-  return user.isAdmin ? <Outlet /> : <Navigate to="/error" />;
+  return user.isAdmin ? <Outlet /> : <Navigate to="/browse" /> ;
 }

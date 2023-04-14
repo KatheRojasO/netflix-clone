@@ -8,6 +8,7 @@ import { useDocumentaries } from "../state/Documentaries/DocumentariesContextPro
 import { createMovie } from "../scripts/moviesCollection";
 import { createSeries } from "../scripts/seriesCollection";
 import { createDocumentary } from "../scripts/documentariesCollection";
+import Header from "../components/Header";
 
 export default function Admin() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,8 @@ export default function Admin() {
 
   return (
     <div className="admin-page">
+      <Header />
+      <br/>
       <div className="container">
         <h1>WELCOME TO NETFLIX DASHBOARD</h1>
         <p>Click on the "Add Entry" button to add an item to our page</p>

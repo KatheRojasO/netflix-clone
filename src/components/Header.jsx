@@ -9,7 +9,7 @@ import data from "../JSONFiles/navbar.json";
 import SearchBar from "./SearchBar";
 
 export default function Header() {
-  const { dispatch } = useUser();
+  const { user, dispatch } = useUser();
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
@@ -46,7 +46,7 @@ export default function Header() {
             <img src={logo} alt="netflix-logo" className="logo"></img>
           </Link>
           <nav className="dropdown">
-            <button class="dropbtn">
+            <button className="dropbtn">
               Browse <ArrowDropDownIcon />
             </button>
             <div className="dropdown-content">{navItems}</div>
@@ -62,7 +62,12 @@ export default function Header() {
               className="user-logo-drop"
             ></img>
             <div className="dropdown-content-su">
-              <button class="dropbtn-su" onClick={() => logout()}>
+              {user.isAdmin && (
+                <button className="dropbtn-su" onClick={() => navigate('/admin')}>
+                  Admin Dashboard
+                </button>
+              )}
+              <button className="dropbtn-su" onClick={() => logout()}>
                 Sign out of Netflix
               </button>
             </div>
