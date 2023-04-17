@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../../JSONFiles/topTenNumbers.json";
 
+// the component looks fine, the CSS is the one that removed a lot of points in the project
 export default function TopTenSection() {
   const topList = data.map((item, index) => (
     <div key={index} className="carousel__item">

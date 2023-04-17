@@ -12,6 +12,7 @@ export default function Modal({ videoData, open, onClose }) {
 
   if (!open) return null;
 
+  // Nesting see this logic, after 6 months no other developer would be able to use this code
   const episodes = seasons
     ? seasons.map((item, seasonIndex) => {
         return (
@@ -22,9 +23,12 @@ export default function Modal({ videoData, open, onClose }) {
             </div>
             {item.episodes.map((episode, episodeIndex) => {
               return (
-                <div key={episodeIndex}
+                <div
+                  key={episodeIndex}
                   className="episodes-container"
-                  onClick={() => navigate(`/watch/${id}/${seasonIndex}/${episodeIndex}`)}
+                  onClick={() =>
+                    navigate(`/watch/${id}/${seasonIndex}/${episodeIndex}`)
+                  }
                 >
                   <div className="episode-card-header">
                     <h4>{episode.title}</h4>

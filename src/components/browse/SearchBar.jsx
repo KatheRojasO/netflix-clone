@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
+// great!
 export default function SearchBar() {
   const [showSearch, setShowSearch] = useState(false);
   const [inputHover, setInputHover] = useState(false);

@@ -8,6 +8,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import data from "../JSONFiles/navbar.json";
 import SearchBar from "./browse/SearchBar";
 
+// this is too long for a header
 export default function Header() {
   const { user, dispatch } = useUser();
   const [scrolled, setScrolled] = useState(false);
@@ -63,7 +64,10 @@ export default function Header() {
             ></img>
             <div className="dropdown-content-su">
               {user.isAdmin && (
-                <button className="dropbtn-su" onClick={() => navigate('/admin')}>
+                <button
+                  className="dropbtn-su"
+                  onClick={() => navigate("/admin")}
+                >
                   Admin Dashboard
                 </button>
               )}

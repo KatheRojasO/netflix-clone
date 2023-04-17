@@ -15,6 +15,7 @@ export default function AdminEntryView() {
   const { series, seriesDispatch } = useSeries();
   const { documentaries, documentariesDispatch } = useDocumentaries();
 
+  // feels like duplicate content
   return (
     <div className="admin-entry-view">
       <AdminCategoryView

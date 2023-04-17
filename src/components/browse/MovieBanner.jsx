@@ -6,7 +6,6 @@ export default function MovieBanner() {
     <div>
       <header className="banner">
         <div className="banner-content">
-          
           <img src={bannerLogo} alt="logo" className="banner-logo" />
           <p className="banner-description">
             Stranger sightings. Government secrets. Fearless kids. And a dark

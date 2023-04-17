@@ -7,6 +7,8 @@ import RecommendIcon from "@mui/icons-material/Recommend";
 import ExpandCircleDownOutlinedIcon from "@mui/icons-material/ExpandCircleDownOutlined";
 import Modal from "./Modal";
 
+// the card is more complex than it needs to be.
+// i would rather have a card with no video preview, than a homescreen with less design
 export default function Card({ videoData }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -32,13 +34,19 @@ export default function Card({ videoData }) {
           <div className="info-container">
             <div className="icons-container">
               <div className="icons-left">
-                <PlayCircleIcon onClick={() => navigate(`/watch/${videoData.id}`)}/>
+                <PlayCircleIcon
+                  onClick={() => navigate(`/watch/${videoData.id}`)}
+                />
                 <AddCircleOutlineIcon />
                 <RecommendIcon />
               </div>
               <div className="icons-right">
-                <ExpandCircleDownOutlinedIcon onClick={()=> setIsOpen(true)} />
-                <Modal videoData={videoData} open={isOpen} onClose={() => setIsOpen(false)}/>
+                <ExpandCircleDownOutlinedIcon onClick={() => setIsOpen(true)} />
+                <Modal
+                  videoData={videoData}
+                  open={isOpen}
+                  onClose={() => setIsOpen(false)}
+                />
               </div>
             </div>
           </div>
